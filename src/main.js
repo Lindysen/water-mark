@@ -6,6 +6,7 @@ import watermarkCallback, { watermarkConfig } from './utils/watermark';
 Vue.config.productionTip = false;
 
 const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
 Vue.directive('watermark',{
   bind(el,binding){
     if (binding.value === undefined || !!binding.value) {
@@ -22,6 +23,7 @@ Vue.directive('watermark',{
     }
   }
 });
+
 bootstrap().then(() => {
   new Vue({
     render: h => h(App),

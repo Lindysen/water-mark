@@ -1,4 +1,3 @@
-import _ from 'lodash';
 
 export const watermarkConfig = {
   attributes: true,
@@ -6,7 +5,7 @@ export const watermarkConfig = {
 };
 
 export default function watermarkCallback(mutationList, observer) {
-  _.forEach(mutationList, (mutationRecord) => {
+  mutationList.forEach((mutationRecord) => {
     const { type, attributeName } = mutationRecord;
     if (type === 'attributes' && attributeName === 'style') {
       observer.disconnect();

@@ -1,7 +1,5 @@
 
 function waterInfo() {
-    const base = 80;
-    const SQRT_THREE = Math.sqrt(3);
     const canvas = document.createElement('canvas');
     document.body.appendChild(canvas);
     canvas.setAttribute('width',160);
